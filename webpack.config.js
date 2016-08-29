@@ -12,7 +12,7 @@ module.exports = {
         'app': './src/client/app/main.ts'
     },
     output : {
-        filename: 'bundle.js'
+        filename: './built/bundle.js'
     },
     devtool: 'source-map',
     resolve: {
