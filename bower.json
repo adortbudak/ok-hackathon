@@ -1,0 +1,17 @@
+{
+  "name": "ok-hackathon",
+  "description": "OK-Hackathon",
+  "main": "main.js",
+  "authors": [
+    "Alper Dortbudak <adortbudak@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/adortbudak/ok-hackathon",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/adortbudak/ok-hackathon/issues"
   },
-  "homepage": "https://github.com/adortbudak/ok-hackathon#readme"
+  "homepage": "https://github.com/adortbudak/ok-hackathon#readme",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
 }
