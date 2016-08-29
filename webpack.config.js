@@ -9,7 +9,7 @@ module.exports = {
             'angular2/router',
             'angular2/http'
         ],
-        'app': './src/client/app/app.ts'
+        'app': './src/client/app/main.ts'
     },
     output : {
         filename: 'bundle.js'

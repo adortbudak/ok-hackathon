@@ -9,7 +9,7 @@
     "node_modules"
   ],
   "files": [
-    "./src/client/app/app.ts",
+    "./src/client/app/main.ts",
     "typings/index.d.ts"
   ]
 }
