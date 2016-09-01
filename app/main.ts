@@ -5,7 +5,7 @@ import { UserService } from './users/users.service';
 
 @Component({
     selector: 'app',
-    template: `<div>Some Text</div>`,
+    templateUrl: '../views/main.html',
     providers: [ UserService ]
 })
 
