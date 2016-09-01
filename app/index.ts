@@ -10,11 +10,7 @@ import { UserComponent } from './users/user.component';
 @Component({
     selector: 'app-main',
     template:`
-    <div class="container">
-        <div class="titleheader">
-        	<img src="../images/one-key-logo.png" width="215" height="53" alt="ONE-KEY&trade; | Unlocking the Digital Jobsite."/>
-        </div> 
-    </div>
+    
 
     <div class="container">
         <div class="form-horizontal">
