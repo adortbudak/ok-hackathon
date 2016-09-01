@@ -22,7 +22,8 @@ export class UserService {
     //getUsers(search: string): IUser[] {
        // var users: IUser[] = [{ firstName: 'ryan', lastName: 'garlock'}];
        // return users;
-         return this._http.get(this._userServiceUrl)
+        console.log(this._userServiceUrl + search);
+         return this._http.get(this._userServiceUrl + search)
              .map((resp: Response) => <IUser>resp.json());
     }
 }
