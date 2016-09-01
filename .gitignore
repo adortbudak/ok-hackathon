@@ -30,7 +30,8 @@ build/Release
 
 # Dependency directories
 node_modules
-bower_components
+bower_components/font-awesome
+bower_components/jquery
 typings
 jspm_packages
 
