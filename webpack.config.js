@@ -7,7 +7,8 @@ module.exports = {
             'reflect-metadata',
             'angular2/core',
             'angular2/router',
-            'angular2/http'
+            'angular2/http',
+            'jquery'
         ],
         'app': './app/main.ts'
     },
