@@ -3,8 +3,8 @@ import { IUser } from './user';
 
 @Component({
     selector: 'user',
-    templateUrl: '../views/user.html',
-    styleUrls:  ['../../content/user.component.css']
+    templateUrl: './views/user.html',
+    styleUrls:  ['./content/user.component.css']
 })
 
 export class UserComponent{
