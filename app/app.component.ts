@@ -10,9 +10,12 @@ import { UserService } from './users/users.service';
 })
 
 export class AppComponent{
-    constructor(private _userService: UserService, private _http: Http) {
-        console.log(this._userService);
-        this._userService = new UserService(_http);
+
+    private _userService: UserService;
+    private _http: Http;
+
+    constructor( ) {
+        this._userService = new UserService(this._http);
         var users = this._userService.getUsers('');
         console.log(users);
     }
