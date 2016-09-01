@@ -8,15 +8,16 @@ import {IUser} from './user';
 
 @Injectable()
 export class UserService {
-    private _userServiceUrl = 'mock-data/userdata.json';
+    private _userServiceUrl = 'http://onekeyapilocal.milwaukeetool.com:80/admin/users?search=';
 
     constructor(private _http: Http) { }
 
     // getUsers(): Observable<IUser[]> {
-    getUsers(search: string): IUser[] {
-        var users: IUser[] = [{ firstName: 'ryan', lastName: 'garlock'}];
-        return users;
-        // return this._http.get(this._userServiceUrl)
+    getUser(search: string): IUser {
+        var user: IUser;
+        user = { firstName: 'ryan', lastName: 'garlock', email: 'garlockrd@gmail.com', numberOfTools: 5243, numberOfProfiles: 0 };
+        return user;
+        // return this._http.get(this._userServiceUrl + search)
         //     .map((resp: Response) => <IUser[]>resp.json());
     }
 }

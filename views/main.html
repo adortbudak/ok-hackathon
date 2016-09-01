@@ -13,15 +13,16 @@
             <div class="form-group">
                 <label for="inputSearch" class="col-lg-2 col-md-2 col-sm-3 control-label">Search Criteria</label>
                 <div class="col-lg-8 col-md-10 col-sm-9">
-                    <input type="text" class="form-control" id="inputSearch" placeholder="Email">
+                    <input type="text" class="form-control" id="inputSearch" [(ngModel)]="searchTerm" placeholder="Email">
                 </div>
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-6 col-lg-offset-2">
                 <button type="reset" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" (click)="search()">Submit</button>
             </div>
         </div>
     </div>
 
+<user *ngIf="user" [user]="user"></user>

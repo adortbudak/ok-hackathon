@@ -2,11 +2,12 @@ import {bootstrap} from 'angular2/platform/browser';
 import {Http, Response} from 'angular2/http';
 import {Component} from 'angular2/core';
 import { UserService } from './users/users.service';
+import { IndexComponent } from './index.component';
 
 @Component({
     selector: 'app',
-    templateUrl: '../views/main.html',
-    providers: [ Http, UserService ]
+    template: '<index></index>',
+    directives: [ IndexComponent ]
 })
 
 export class AppComponent{
@@ -15,8 +16,5 @@ export class AppComponent{
     private _http: Http;
 
     constructor( ) {
-        this._userService = new UserService(this._http);
-        var users = this._userService.getUsers('');
-        console.log(users);
     }
 }
