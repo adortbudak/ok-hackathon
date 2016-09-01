@@ -7,14 +7,11 @@ import { IndexComponent } from './index.component';
 @Component({
     selector: 'app',
     template: '<index></index>',
-    directives: [ IndexComponent ]
+    directives: [ IndexComponent ],
+    providers: [ Http, UserService ]
 })
 
 export class AppComponent{
-
-    private _userService: UserService;
-    private _http: Http;
-
     constructor( ) {
     }
 }

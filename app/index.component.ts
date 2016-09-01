@@ -16,12 +16,13 @@ export class IndexComponent{
     searchTerm: string;
     user: IUser;
 
-    constructor(private _userService: UserService) {
+    constructor(private _userService: UserService, private _http: Http) {
         console.log(this._userService);
         this._userService = new UserService(undefined);
     }
 
     search(): void {
         this.user = this._userService.getUser(this.searchTerm);
+        console.log(this.user);
     }
 }

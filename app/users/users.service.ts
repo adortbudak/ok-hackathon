@@ -5,6 +5,7 @@ import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
 import {IUser} from './user';
+import { Tool } from './tool';
 
 @Injectable()
 export class UserService {
@@ -15,7 +16,8 @@ export class UserService {
     // getUsers(): Observable<IUser[]> {
     getUser(search: string): IUser {
         var user: IUser;
-        user = { firstName: 'ryan', lastName: 'garlock', email: 'garlockrd@gmail.com', numberOfTools: 5243, numberOfProfiles: 0 };
+        var items: Tool[] = [{ createDate: new Date(), description: 'Testor', serialNumber: '111111', modelNumber: '2000-20' }];
+        user = { firstName: 'ryan', lastName: 'garlock', email: 'garlockrd@gmail.com', numberOfTools: 5243, numberOfProfiles: 0, items: items };
         return user;
         // return this._http.get(this._userServiceUrl + search)
         //     .map((resp: Response) => <IUser[]>resp.json());
