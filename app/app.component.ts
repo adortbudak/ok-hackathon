@@ -5,7 +5,7 @@ import { IndexComponent } from './index';
 
 @Component({
     selector: 'app',
-    templateUrl: '../views/main.html',
+    templateUrl: './views/main.html',
     providers: [ Http, UserService, HTTP_PROVIDERS ],
     directives: [IndexComponent]
 })
