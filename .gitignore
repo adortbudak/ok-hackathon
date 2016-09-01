@@ -34,6 +34,12 @@ bower_components/font-awesome
 bower_components/jquery
 typings
 built
+ok-hackathon-linux-ia32
+ok-hackathon-linux-x64
+ok-hackathon-win32-ia32
+ok-hackathon-win32-x64
+
+
 jspm_packages
 
 # Optional npm cache directory
