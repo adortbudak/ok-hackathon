@@ -4,6 +4,7 @@
 import {Http, Response, HTTP_PROVIDERS} from 'angular2/http';
 import {Component, Inject, forwardRef} from 'angular2/core';
 import { UserService } from './users/users.service';
+import {IUser} from "./users/user";
 
 @Component({
     selector: 'app-main',
@@ -33,20 +34,29 @@ import { UserService } from './users/users.service';
             </div>
         </div>
     </div>
+    <user *ngIf="user" [user]="user"></user>
 `,
     providers: [HTTP_PROVIDERS]
 
 })
 
 export class IndexComponent{
+    searchTerm: string;
+    user: IUser;
+    _userService : UserService;
 
     constructor(@Inject(forwardRef(() => UserService)) _userService,
                 @Inject(forwardRef(() => Http)) _http)  {
-        console.log(_userService);
-        var users = _userService.getUsers('');
-        console.log(users);
+        this._userService = _userService;
+
     }
 
-
+    search(): void {
+        this._userService.getUser(this.searchTerm).subscribe((result) => {
+            if (result) {
+                this.user = result;
+            }});
+        console.log(this.user);
+    }
 
 }

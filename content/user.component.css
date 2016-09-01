@@ -1,0 +1,18 @@
+.user-record {
+    margin-top:20px;
+    border: 5px solid black;
+    text-align: center;
+}
+.user-record .value {
+    font-size:20px;
+    font-weight: bold;
+}
+
+.status-fields {    
+    margin-top:20px;
+    text-align: center;
+}
+.status-fields .value {
+    font-size:30px;
+    font-weight: bold;
+}

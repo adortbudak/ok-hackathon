@@ -1,22 +1,24 @@
-import {Injectable,forwardRef} from 'angular2/core';
+import {Injectable,forwardRef, Inject} from 'angular2/core';
 import {Http, Response} from 'angular2/http';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-
+import { Tool } from './tool';
 import {IUser} from './user';
-import {Inject} from "angular2/src/core/di/decorators";
+
+
+
 
 @Injectable()
 export class UserService {
-    private _userServiceUrl = 'mock-data/userdata.json';
+    private _userServiceUrl = 'http://onekeyapilocal.milwaukeetool.com:80/admin/users?search=';
     private _http: Http;
 
     constructor(@Inject(forwardRef(() => Http)) _http) {
         this._http = _http;
     }
 
-    getUsers(search: string): Observable<IUser> {
+    getUser(search: string): Observable<IUser> {
     //getUsers(search: string): IUser[] {
        // var users: IUser[] = [{ firstName: 'ryan', lastName: 'garlock'}];
        // return users;

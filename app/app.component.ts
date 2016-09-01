@@ -10,4 +10,10 @@ import { IndexComponent } from './index';
     directives: [IndexComponent]
 })
 
-export class AppComponent{}
+
+
+export class AppComponent{
+    constructor( ) {
+    }
+}
+

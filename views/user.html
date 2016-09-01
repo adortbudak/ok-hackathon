@@ -1,0 +1,26 @@
+<div class="container user-record">
+    <div class="row">
+        <div class="col-md-4">
+            Email Address
+            <div class="value">{{ user.email }}</div>
+        </div>
+        <div class="col-md-4">
+            First Name
+            <div class="value">{{ user.firstName }}</div>
+        </div>
+        <div class="col-md-4">
+            Last Name
+            <div class="value">{{ user.lastName }}</div>
+        </div>
+    </div>
+    <div class="row status-fields">
+        <div class="col-md-6">
+            Number of Tools
+            <div class="value">{{ user.numberOfTools | number }}</div>
+        </div>
+        <div class="col-md-6">
+            Number of Profiles
+            <div class="value">{{ user.numberOfProfiles | number }}</div>
+        </div>
+    </div>
+</div>

@@ -33,6 +33,7 @@ node_modules
 bower_components/font-awesome
 bower_components/jquery
 typings
+built
 jspm_packages
 
 # Optional npm cache directory
