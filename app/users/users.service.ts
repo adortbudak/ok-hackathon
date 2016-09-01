@@ -11,7 +11,7 @@ import {IUser} from './user';
 
 @Injectable()
 export class UserService {
-    private _userServiceUrl = 'http://onekeyapilocal.milwaukeetool.com:80/admin/users?search=';
+    private _userServiceUrl = 'http://onekeyapitest.milwaukeetool.com/toolsecurity/admin/users?search=';
     private _http: Http;
 
     constructor(@Inject(forwardRef(() => Http)) _http) {
@@ -19,10 +19,6 @@ export class UserService {
     }
 
     getUser(search: string): Observable<IUser> {
-    //getUsers(search: string): IUser[] {
-       // var users: IUser[] = [{ firstName: 'ryan', lastName: 'garlock'}];
-       // return users;
-        console.log(this._userServiceUrl + search);
          return this._http.get(this._userServiceUrl + search)
              .map((resp: Response) => <IUser>resp.json());
     }

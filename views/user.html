@@ -1,26 +1,46 @@
+<div class="container return-results">    
+    <div class="col-md-4">
+        Results for: <span class="value">{{ user.email }}</span>
+    </div>    
+</div>
 <div class="container user-record">
     <div class="row">
-        <div class="col-md-4">
-            Email Address
-            <div class="value">{{ user.email }}</div>
-        </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             First Name
             <div class="value">{{ user.firstName }}</div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             Last Name
             <div class="value">{{ user.lastName }}</div>
-        </div>
-    </div>
-    <div class="row status-fields">
-        <div class="col-md-6">
+        </div>        
+        <div class="col-md-3">
             Number of Tools
             <div class="value">{{ user.numberOfTools | number }}</div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
             Number of Profiles
             <div class="value">{{ user.numberOfProfiles | number }}</div>
         </div>
+    </div>
+
+    <div class="items">
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Serial Number</th>
+                    <th>Model Number</th>
+                    <th>Create Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of user.items">
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.serialNumber }}</td>
+                    <td>{{ item.modelNumber }}</td>
+                    <td>{{ item.createDate }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

@@ -10,28 +10,20 @@ import { UserComponent } from './users/user.component';
 @Component({
     selector: 'app-main',
     template:`
-        <div class="container">
-        <div class="col-lg-4 col-md-4">
-            <h3>ONE-KEY User Search</h3>
-        </div>
-        <div class="col-lg-8 col-md-8">
-            <img src=""/>
-        </div>
+    <div class="container">
+        <div class="titleheader">
+        	<img src="../images/one-key-logo.png" width="215" height="53" alt="ONE-KEY&trade; | Unlocking the Digital Jobsite."/>
+        </div> 
     </div>
 
     <div class="container">
         <div class="form-horizontal">
             <div class="form-group">
-                <label for="inputSearch" class="col-lg-2 col-md-2 col-sm-3 control-label">Search Criteria</label>
-                <div class="col-lg-8 col-md-10 col-sm-9">
-                    <input type="text" class="form-control" id="inputSearch" [(ngModel)]="searchTerm" placeholder="Email">
+                <label for="inputSearch" class="col-lg-2 col-md-2 col-sm-3 control-label">Search Criteria</label>                
+                <div class="col-lg-8 col-md-6 col-sm-9">
+                    <input class="form-control ng-untouched ng-pristine ng-valid" id="inputSearch" [(ngModel)]="searchTerm" placeholder="Email" type="text">
                 </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-lg-6 col-lg-offset-2">
-                <button type="reset" class="btn btn-default">Cancel</button>
-                <button type="submit" class="btn btn-primary" (click)="search()">Submit</button>
+                <button class="col-lg-2 col-md-2 col-sm-3 btn btn-primary" (click)="search()" type="submit">Submit</button>
             </div>
         </div>
     </div>
@@ -56,7 +48,6 @@ export class IndexComponent{
         this.user = undefined;
         this._userService.getUser(this.searchTerm).subscribe((result) => {
             if (result) {
-                console.log(result);
                 this.user = result;
             }
         }, (err) => {
