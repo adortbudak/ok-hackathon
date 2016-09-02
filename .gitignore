@@ -38,7 +38,9 @@ ok-hackathon-linux-ia32
 ok-hackathon-linux-x64
 ok-hackathon-win32-ia32
 ok-hackathon-win32-x64
-.idea
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
 
 
 jspm_packages

@@ -32,6 +32,21 @@ import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
         </div>
         </div>
         <div class="row" >
+
+            <div class="col-lg-4 col-lg-offset-4">
+                <div id="tile2" class="tile">
+                    <div class="carousel slide" data-ride="carousel" id="myCarousel">                        
+                        <div class="carousel-inner">
+                            <div class="item active dynamicTile">
+                                <P *ngIf="user">Number of Tools: {{ user.numberOfTools | number }}</P>
+                            </div>
+                            <div class="item dynamicTile">
+                                <P *ngIf="user">Number of Profiles: {{ user.numberOfProfiles | number }}</P>
+                            </div>
+                        </div>                           
+                    </div> 
+                </div>
+
             <div class="col-lg-4 col-lg-offset-4 return-results">
                     <div id="tile2" class="tile">
                         <div class="carousel slide" data-ride="carousel" id="myCarousel">                        
@@ -45,6 +60,7 @@ import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
                             </div>                           
                         </div> 
                     </div>
+
             </div>
         </div>         
     </div>
