@@ -38,6 +38,7 @@ ok-hackathon-linux-ia32
 ok-hackathon-linux-x64
 ok-hackathon-win32-ia32
 ok-hackathon-win32-x64
+.idea
 
 
 jspm_packages

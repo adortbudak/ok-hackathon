@@ -6,17 +6,17 @@ import {Component, Inject, forwardRef} from 'angular2/core';
 import { UserService } from './users/users.service';
 import {IUser} from "./users/user";
 import { UserComponent } from './users/user.component';
+import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
 
 @Component({
     selector: 'app-main',
     styleUrls:  ['./content/index.component.css'],
-    template:`
-
+    template:`  
     <div class="container">
         <div class="form-horizontal">
             <div class="form-group">
                 <label for="inputSearch" class="col-lg-2 col-md-2 col-sm-3 control-label">Search Criteria</label>                
-                <div class="col-lg-8 col-md-6 col-sm-9">
+                <div class="col-lg-4 col-md-6 col-sm-9">
                     <div>
                         <input class="form-control ng-untouched ng-pristine ng-valid" id="inputSearch" (keyup)="keyup($event)" [(ngModel)]="searchTerm" placeholder="Email" type="text">
                         <div class="autocomplete" *ngIf="autoCompleteList">
@@ -26,17 +26,37 @@ import { UserComponent } from './users/user.component';
                         </div>
                     </div>
                 </div>
-                <button class="col-lg-2 col-md-2 col-sm-3 btn btn-primary" (click)="search()" type="submit">Submit</button>
+                <button class="col-lg-4 col-md-2 col-sm-3 btn btn-primary" (click)="search()"  type="submit">Submit</button>                
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">                
+                    <div class="carousel slide" data-ride="carousel" id="myCarousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>                        
+                    </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <P>Text</P>
+                            </div>
+                            <div class="item">
+                                <P>Text 2</P>
+                            </div>
+                        </div>
+                    </div>                               
+            </div>
+        </div>         
     </div>
     <user *ngIf="user" [user]="user"></user>
+    
+    
 `,
     directives: [ UserComponent ],
     providers: [HTTP_PROVIDERS ]
 })
 
-export class IndexComponent{
+export class IndexComponent implements AfterViewInit{
     searchTerm: string;
     user: IUser;
     autoCompleteList: IUser[];
@@ -66,8 +86,8 @@ export class IndexComponent{
     }
 
     selectedAutoCompleteIndex: number = -1;
-    keyup($event): void {
-        var keyCode = $event.keyCode;
+    keyup(event): void {
+        var keyCode = event.keyCode;
         switch (keyCode) {
             case 13:
                 if (this.selectedAutoCompleteIndex > -1) {
@@ -101,5 +121,9 @@ export class IndexComponent{
         }, (err) => {
             console.log(err);
         });
+    }
+
+    ngAfterViewInit(){
+        $('#myCarousel').carousel({interval: 5000});
     }
 }
