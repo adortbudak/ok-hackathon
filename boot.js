@@ -16,5 +16,5 @@ app.on("ready", function () {
     var windowPath  = path.join(__dirname,"/index.html");
     console.log(windowPath);
     mainWindow.loadURL("file://" + windowPath);
-    mainWindow.openDevTools();
+    //mainWindow.openDevTools();
 })
