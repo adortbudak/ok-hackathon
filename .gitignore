@@ -38,6 +38,8 @@ ok-hackathon-linux-ia32
 ok-hackathon-linux-x64
 ok-hackathon-win32-ia32
 ok-hackathon-win32-x64
+built/bundle.js
+built/bundle.js.map
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/dictionaries
@@ -51,3 +53,4 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+/built/
