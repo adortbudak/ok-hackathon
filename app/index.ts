@@ -30,10 +30,10 @@ import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
                     </ol>
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img src="http://handsontek.net/demoimages/tiles/weather2.png" class="img-responsive"/>
+                                <P>Text</P>
                             </div>
                             <div class="item">
-                                <img src="http://handsontek.net/demoimages/tiles/weather.png" class="img-responsive"/>
+                                <P>Text 2</P>
                             </div>
                         </div>
                     </div>                               
