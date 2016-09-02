@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e4ece4-d8ab-4081-a4e7-d184fe6b9437" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.ts" afterPath="$PROJECT_DIR$/app/index.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/built/bundle.js" afterPath="$PROJECT_DIR$/built/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/built/bundle.js.map" afterPath="$PROJECT_DIR$/built/bundle.js.map" />
@@ -50,33 +51,33 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="714">
               <caret line="42" column="20" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
               <folding>
                 <element signature="e#44#105#0" expanded="true" />
-                <marker date="1472781085730" expanded="true" signature="469:2033" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="495:1128" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="533:1113" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="570:1098" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="757:938" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1154:2013" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1155:2013" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1206:1998" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1256:1979" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1346:1951" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1427:1893" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1497:1643" ph="..." />
-                <marker date="1472781085730" expanded="true" signature="1706:1858" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="469:1985" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="495:1128" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="533:1113" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="570:1098" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="757:938" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1154:1965" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1155:1965" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1206:1950" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1252:1931" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1338:1907" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1415:1853" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1481:1619" ph="..." />
+                <marker date="1472781232670" expanded="true" signature="1678:1822" ph="..." />
               </folding>
             </state>
           </provider>
@@ -134,10 +135,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/typings/index.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="85">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -212,7 +213,8 @@
     <handled-path value="$PROJECT_DIR$/ok-hackathon-win32-x64/resources/app/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="52" />
+    <option name="x" value="30" />
+    <option name="y" value="28" />
     <option name="width" value="1807" />
     <option name="height" value="1047" />
   </component>
@@ -241,8 +243,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -323,6 +323,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,33 +421,34 @@
       <workItem from="1472668323694" duration="4950000" />
       <workItem from="1472733624058" duration="23116000" />
       <workItem from="1472763861078" duration="9832000" />
-      <workItem from="1472776497690" duration="3140000" />
+      <workItem from="1472776497690" duration="3283000" />
+      <workItem from="1472820636214" duration="1957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52694000" />
+    <option name="totallyTimeSpent" value="54794000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="0" width="1807" height="1047" extended-state="0" />
+    <frame x="30" y="28" width="1807" height="1047" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16393442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26477024" sideWeight="0.5206331" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26477024" sideWeight="0.52289426" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.49802148" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26477024" sideWeight="0.47936687" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26477024" sideWeight="0.4771057" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -687,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,16 +714,6 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/typings/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,7 +769,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="714">
           <caret line="42" column="20" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="20" />
           <folding />
         </state>
@@ -785,23 +777,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
           <folding>
             <element signature="e#44#105#0" expanded="true" />
-            <marker date="1472781085730" expanded="true" signature="469:2033" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="495:1128" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="533:1113" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="570:1098" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="757:938" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1154:2013" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1155:2013" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1206:1998" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1256:1979" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1346:1951" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1427:1893" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1497:1643" ph="..." />
-            <marker date="1472781085730" expanded="true" signature="1706:1858" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="469:1985" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="495:1128" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="533:1113" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="570:1098" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="757:938" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1154:1965" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1155:1965" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1206:1950" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1252:1931" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1338:1907" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1415:1853" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1481:1619" ph="..." />
+            <marker date="1472781232670" expanded="true" signature="1678:1822" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/typings/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
