@@ -38,7 +38,7 @@ ok-hackathon-linux-ia32
 ok-hackathon-linux-x64
 ok-hackathon-win32-ia32
 ok-hackathon-win32-x64
-.idea/workspace.xml
+.idea
 
 
 jspm_packages
@@ -49,3 +49,4 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+/.idea/
