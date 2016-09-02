@@ -13,6 +13,7 @@ import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
     styleUrls:  ['./content/index.component.css'],
     template:`  
     <div class="container">
+        <div class="row">
         <div class="form-horizontal">
             <div class="form-group">
                 <label for="inputSearch" class="col-lg-2 col-md-2 col-sm-3 control-label">Search Criteria</label>                
@@ -29,22 +30,21 @@ import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
                 <button class="col-lg-4 col-md-2 col-sm-3 btn btn-primary" (click)="search()"  type="submit">Submit</button>                
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">                
-                    <div class="carousel slide" data-ride="carousel" id="myCarousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>                        
-                    </ol>
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <P>Text</P>
-                            </div>
-                            <div class="item">
-                                <P>Text 2</P>
-                            </div>
-                        </div>
-                    </div>                               
+        </div>
+        <div class="row" >
+            <div class="col-lg-4 col-lg-offset-4 return-results">
+                    <div id="tile2" class="tile">
+                        <div class="carousel slide" data-ride="carousel" id="myCarousel">                        
+                            <div class="carousel-inner">
+                                <div class="item active dynamicTile">
+                                    <P *ngIf="user">Number of Tools: {{ user.numberOfTools | number }}</P>
+                                </div>
+                                <div class="item dynamicTile">
+                                    <P *ngIf="user">Number of Profiles: {{ user.numberOfProfiles | number }}</P>
+                                </div>
+                            </div>                           
+                        </div> 
+                    </div>
             </div>
         </div>         
     </div>
@@ -66,6 +66,7 @@ export class IndexComponent implements AfterViewInit{
                 @Inject(forwardRef(() => Http)) _http)  {
         this._userService = _userService;
 
+
     }
 
     autocompleteClick(email: string): void {
@@ -78,7 +79,9 @@ export class IndexComponent implements AfterViewInit{
         this.autoCompleteList = undefined;
         this._userService.getUser(this.searchTerm).subscribe((result) => {
             if (result) {
+                this.startCarousel();
                 this.user = result;
+
             }
         }, (err) => {
             console.log(err);
@@ -124,6 +127,10 @@ export class IndexComponent implements AfterViewInit{
     }
 
     ngAfterViewInit(){
-        $('#myCarousel').carousel({interval: 5000});
+        this.startCarousel();
+    }
+
+    startCarousel() : void {
+        $('#myCarousel').carousel({interval: 2000});
     }
 }
