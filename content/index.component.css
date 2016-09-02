@@ -1,0 +1,26 @@
+.autocomplete {
+    background-color: white;
+    color: black;
+    position:absolute;
+    width:93%;
+    z-index: 100 !important;
+    border: 2px black solid;
+    border-top:none;
+}
+
+#inputSearch {
+    border:none;
+}
+
+.autocomplete .autocomplete-item {
+    padding:4px;
+    cursor: pointer;
+}
+
+.autocomplete-item.even {
+    background-color:lightgray;
+}
+.autocomplete-item.selected {
+    background-color:#2e6da4;
+    color:white;
+}

@@ -12,6 +12,7 @@ import {IUser} from './user';
 @Injectable()
 export class UserService {
     private _userServiceUrl = 'http://onekeyapitest.milwaukeetool.com/toolsecurity/admin/users?search=';
+    private _userAutoCompleteUrl = 'http://onekeyapilocal.milwaukeetool.com/admin/users/autocomplete?search=';
     private _http: Http;
 
     constructor(@Inject(forwardRef(() => Http)) _http) {
@@ -21,5 +22,10 @@ export class UserService {
     getUser(search: string): Observable<IUser> {
          return this._http.get(this._userServiceUrl + search)
              .map((resp: Response) => <IUser>resp.json());
+    }
+
+    getAutoComplete(search: string): Observable<IUser[]> {
+         return this._http.get(this._userAutoCompleteUrl + search)
+             .map((resp: Response) => <IUser[]>(resp.json().items));
     }
 }
