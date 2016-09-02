@@ -6,67 +6,31 @@ import {Component, Inject, forwardRef} from 'angular2/core';
 import { UserService } from './users/users.service';
 import {IUser} from "./users/user";
 import { UserComponent } from './users/user.component';
-import {AfterViewInit} from "angular2/src/core/metadata/lifecycle_hooks";
+import {AfterViewInit, OnInit} from "angular2/src/core/metadata/lifecycle_hooks";
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import { Weather } from './weather';
 
 @Component({
     selector: 'app-main',
     styleUrls:  ['./content/index.component.css'],
-    template:`  
-    <div class="container">
-        <div class="row">
-        <div class="form-horizontal">
-            <div class="form-group">
-                <label for="inputSearch" class="col-lg-2 col-md-2 col-sm-3 control-label">Search Criteria</label>                
-                <div class="col-lg-4 col-md-6 col-sm-9">
-                    <div>
-                        <input class="form-control ng-untouched ng-pristine ng-valid" id="inputSearch" (keyup)="keyup($event)" [(ngModel)]="searchTerm" placeholder="Email" type="text">
-                        <div class="autocomplete" *ngIf="autoCompleteList">
-                            <div *ngFor="let user of autoCompleteList; let index=index; let odd=odd; let even=even;" 
-                                    [ngClass]="{ 'even': even, selected: index == selectedAutoCompleteIndex }" class="autocomplete-item" 
-                                    (click)="autocompleteClick(user.email)">{{ user.email }}</div>
-                        </div>
-                    </div>
-                </div>
-                <button class="col-lg-4 col-md-2 col-sm-3 btn btn-primary" (click)="search()"  type="submit">Submit</button>                
-            </div>
-        </div>
-        </div>
-        <div class="row" >
-            <div class="col-lg-4 col-lg-offset-4 return-results">
-                    <div id="tile2" class="tile">
-                        <div class="carousel slide" data-ride="carousel" id="myCarousel">                        
-                            <div class="carousel-inner">
-                                <div class="item active dynamicTile">
-                                    <P *ngIf="user">Number of Tools: {{ user.numberOfTools | number }}</P>
-                                </div>
-                                <div class="item dynamicTile">
-                                    <P *ngIf="user">Number of Profiles: {{ user.numberOfProfiles | number }}</P>
-                                </div>
-                            </div>                           
-                        </div> 
-                    </div>
-            </div>
-        </div>         
-    </div>
-    <user *ngIf="user" [user]="user"></user>
-    
-    
-`,
+    templateUrl: './views/index.html',
     directives: [ UserComponent ],
     providers: [HTTP_PROVIDERS ]
 })
 
-export class IndexComponent implements AfterViewInit{
+export class IndexComponent implements OnInit, AfterViewInit{
     searchTerm: string;
     user: IUser;
     autoCompleteList: IUser[];
     private _userService : UserService;
+    private _http: Http;
 
     constructor(@Inject(forwardRef(() => UserService)) _userService,
                 @Inject(forwardRef(() => Http)) _http)  {
         this._userService = _userService;
-
-
+        this._http = _http;
     }
 
     autocompleteClick(email: string): void {
@@ -86,6 +50,40 @@ export class IndexComponent implements AfterViewInit{
         }, (err) => {
             console.log(err);
         });
+    }
+
+    location: string = "Brookfield, WI"
+    weather: Weather = new Weather();
+    ngOnInit() { 
+        this.findWeather();
+    }
+
+    findWeather(): void {
+        this.getWeather().subscribe((result) => {
+            if (result) {
+                this.weather = result.current_observation;   
+                console.log(this.weather);    
+            }
+        }, (err) => {
+            console.log(err);
+        });
+    }
+
+    weatherKeyUp(event): void {
+        if (event.keyCode == 13) {
+            this.findWeather();
+        }
+    }
+
+    getWeather(): Observable<any> {
+        var locationArray = this.location.split(",");
+        if (locationArray.length != 2) {
+            return;
+        }
+        var city = locationArray[0].trim();
+        var state = locationArray[1].trim();
+        return this._http.get("http://api.wunderground.com/api/b5d31858560c4bd4/conditions/q/" + state + "/" + city + ".json")
+             .map((resp: Response) => <any>(resp.json()));
     }
 
     selectedAutoCompleteIndex: number = -1;

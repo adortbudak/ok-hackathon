@@ -2,7 +2,7 @@
     background-color: white;
     color: black;
     position:absolute;
-    width:93%;
+    width:96.5%;
     z-index: 100 !important;
     border: 2px black solid;
     border-top:none;
@@ -23,4 +23,42 @@
 .autocomplete-item.selected {
     background-color:#2e6da4;
     color:white;
+}
+
+.carousel { 
+    background-color: #2e6da4;
+    text-align: center;
+}
+
+.carousel .carousel-inner {
+    height:100px;
+    position:relative;
+    text-align: center;
+}
+
+.carousel .carousel-inner .item {
+    position:absolute;
+    top:40%;
+    width:100%;
+    text-align: center;
+}
+
+.carousel .carousel-inner .weather-item {
+    position:absolute;
+    top:0;
+    width:100%;
+    text-align: center;
+}
+
+.location-div input {
+    color:black;
+}
+
+.location-div {
+    text-align: right;
+}
+
+
+button {
+    margin-top: 20px;
 }
