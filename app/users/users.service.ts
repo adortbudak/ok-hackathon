@@ -12,7 +12,7 @@ import {IUser} from './user';
 @Injectable()
 export class UserService {
     private _userServiceUrl = 'http://onekeyapitest.milwaukeetool.com/toolsecurity/admin/users?search=';
-    private _userAutoCompleteUrl = 'http://onekeyapilocal.milwaukeetool.com/admin/users/autocomplete?search=';
+    private _userAutoCompleteUrl = 'http://onekeyapitest.milwaukeetool.com/toolsecurity/admin/users/autocomplete?search=';
     private _http: Http;
 
     constructor(@Inject(forwardRef(() => Http)) _http) {
