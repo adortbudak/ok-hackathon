@@ -129,6 +129,6 @@ export class IndexComponent implements OnInit, AfterViewInit{
     }
 
     startCarousel() : void {
-        $('#myCarousel').carousel({interval: 2000});
+        $('#myCarousel').carousel({interval: 3000});
     }
 }
