@@ -11,6 +11,7 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import { Weather } from './weather';
+import {Injectable} from "angular2/src/core/di/decorators";
 
 @Component({
     selector: 'app-main',
@@ -20,15 +21,13 @@ import { Weather } from './weather';
     providers: [HTTP_PROVIDERS ]
 })
 
+@Injectable()
 export class IndexComponent implements OnInit, AfterViewInit{
     searchTerm: string;
     user: IUser;
     autoCompleteList: IUser[];
-    private _userService : UserService;
-    private _http: Http;
 
-    constructor(@Inject(forwardRef(() => UserService)) _userService,
-                @Inject(forwardRef(() => Http)) _http)  {
+    constructor(private _userService:UserService, private _http:Http)  {
         this._userService = _userService;
         this._http = _http;
     }
